@@ -11,15 +11,12 @@ import LogoSection from "./components/LogoSection";
 export default function Home() {
   return (
     <div className="max-w-full h-full flex-grow justify-start items-center">
-      <Header />
-      <Navbar />
       <Hero />
       <LogoSection />
       <NewArrivals />
       <TopSelling />
       <DressStyle />
       <Customer />
-      <Footer />
     </div>
   );
 }
