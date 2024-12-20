@@ -22,7 +22,7 @@ export default function TopSelling() {
           />
           <div className="p-4">
             <h3 className="text-lg font-semibold text-black">
-              T-shirt with Tape Details
+              Vertical Striped Shirt
             </h3>
             <div className="flex text-[#FFAD33] items-center space-x-1">
               <IoIosStar />
@@ -49,7 +49,7 @@ export default function TopSelling() {
           />
           <div className="p-4">
             <h3 className="text-lg font-semibold text-black">
-              Skinny Fit Jeans
+              Courage Graphic T-shirt
             </h3>
             <div className="flex text-[#FFAD33] items-center space-x-1">
               <IoIosStar />
@@ -77,7 +77,7 @@ export default function TopSelling() {
           />
           <div className="p-4">
             <h3 className="text-lg font-semibold text-black">
-              Checkered Shirt
+              Loose Fit Bermuda Shorts
             </h3>
             <div className="flex text-[#FFAD33] items-center space-x-1">
               <IoIosStar />
@@ -102,7 +102,7 @@ export default function TopSelling() {
           />
           <div className="p-4">
             <h3 className="text-lg font-semibold text-black">
-              Sleeve Striped T-shirt
+              Faded Skinny Jeans
             </h3>
             <div className="flex text-[#FFAD33] items-center space-x-1">
               <IoIosStar />
