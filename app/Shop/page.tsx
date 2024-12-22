@@ -1,59 +1,132 @@
 import Image from "next/image";
 import Link from "next/link";
-import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowForward, IoIosStar } from "react-icons/io";
+import Product from "./components/Product";
+import Review from "./components/Review";
+import { Button } from "@/components/ui/button";
+import { TiTick } from "react-icons/ti";
 
 export default function Shop() {
   return (
-    <main className="min-h-screen">
-      <div className="relative flex flex-row items-center gap-3 w-[259px] h-[22px] left-[100px] top-[30px]">
-        {/* Home Section */}
-        <div className="flex flex-row items-center gap-1 w-[63px] h-[16px]">
-          <div className="w-[43px] h-[11px] font-satoshi font-normal text-[rgba(0,0,0,0.6)] text-[16px] leading-[22px]">
-            Home <IoIosArrowForward className="ml-1" />
-          </div>
-        </div>
-        {/* Shop Section */}
-        <div className="flex flex-row items-center gap-1 w-[57px] h-[16px]">
-          <div className="w-[37px] h-[11px] font-satoshi font-normal text-[rgba(0,0,0,0.6)] text-[16px] leading-[22px]">
-            Shop <IoIosArrowForward />
-          </div>
-
-          {/* Rotating Arrow inside Shop */}
-          <div className="w-[16px] h-[16px] transform rotate-[-90deg]"></div>
-        </div>
-        {/* Men Section */}
-        <div className="flex flex-row items-center gap-1 w-[57px] h-[16px]">
-          <div className="w-[37px] h-[11px] font-satoshi font-normal text-[rgba(0,0,0,0.6)] text-[16px] leading-[22px]">
-            Men <IoIosArrowForward />
-          </div>
-
-          {/* Rotating Arrow inside Men */}
-          <div className="w-[16px] h-[16px] transform rotate-[-90deg]"></div>
-        </div>
-        {/* T-shirt Section */}
-        <div className="w-[100px] h-[22px] mt-3 font-satoshi font-normal text-[16px] leading-[22px] text-black flex-none order-3 flex-grow-0">
-          T-shirts
-        </div>
-        {/* <div className="w-[152px] h-[167px] left-[100px] top-[216px] rounded-[20px]">
-          <Image
-            src="/images/product-1.png" // Replace with your actual image path
-            alt="image description"
-            width={152}
-            height={167}
-            className="object-cover rounded-[20px]" // Ensures the image covers the area with rounded corners
-          />
-        </div> */}
-        <div className="absolute w-[444px] h-[530px] left-[266px] mt-30 bg-[#F0EEED] rounded-[20px]">
+    <main className="min-h-screen bg-white overflow-x-hidden">
+      {" "}
+      {/* Prevent horizontal scroll */}
+      {/* Breadcrumb Navigation */}
+      <div className="flex items-center gap-2 py-6 px-10 text-sm text-gray-600">
+        <Link href="/" className="hover:text-gray-900">
+          Home
+        </Link>
+        <IoIosArrowForward />
+        <Link href="/shop" className="hover:text-gray-900">
+          Shop
+        </Link>
+        <IoIosArrowForward />
+        <Link href="/shop/men" className="hover:text-gray-900">
+          Men
+        </Link>
+        <IoIosArrowForward />
+        <span className="text-black">T-shirts</span>
+      </div>
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 py-10 grid grid-cols-1 lg:grid-cols-12 gap-6">
+        {/* Left Column - Image Thumbnails */}
+        <div className="lg:col-span-2 flex flex-col items-start space-y-4">
           <Image
             src="/images/shop-img-2.png"
-            alt="product image"
-            width={444}
-            height={530}
+            alt="Thumbnail 1"
+            width={152}
+            height={167}
+            className="w-[152px] h-[167px] border border-black rounded-[20px] object-cover"
+          />
+          <Image
+            src="/images/shop-img-3.png"
+            alt="Thumbnail 2"
+            width={152}
+            height={167}
+            className="w-[152px] h-[167px] border hover:border-black rounded-[20px] object-cover"
+          />
+          <Image
+            src="/images/shop-img-1.png"
+            alt="Thumbnail 3"
+            width={152}
+            height={167}
+            className="w-[152px] h-[167px] border hover:border-black rounded-[20px] object-cover"
           />
         </div>
 
-        {/* Link */}
-        <Link href="/Navbar"></Link>
+        {/* Center Column - Main Image */}
+        <div className="lg:col-span-5 flex justify-center">
+          <Image
+            src="/images/shop-img-2.png"
+            alt="Main Product"
+            width={444}
+            height={530}
+            className="w-[444px] h-[530px] border border-gray-300 rounded-[20px] object-cover"
+          />
+        </div>
+
+        {/* Right Column - Product Details */}
+        <div className="lg:col-span-5 space-y-6">
+          <h1 className="text-[40px] font-bold leading-[48px] text-black">
+            One Life Graphic T-shirt
+          </h1>
+
+          {/* Product Rating */}
+          <div className="flex items-center gap-2 text-yellow-500">
+            {[...Array(5)].map((_, index) => (
+              <IoIosStar key={index} size={24} />
+            ))}
+            <span className="text-black text-[16px]">4.5/5</span>
+          </div>
+
+          {/* Pricing */}
+          <div className="flex items-center gap-4">
+            <p className="text-[32px] font-bold text-black">$260</p>
+            <p className="text-[32px] font-bold text-black/30 line-through">
+              $300
+            </p>
+            <p className="text-lg text-red-500 rounded-xl bg-red-100 px-2">
+              -40%
+            </p>
+          </div>
+
+          {/* Product Description */}
+          <p className="text-gray-600 border-b-2 border-gray-100 mt-6">
+            This graphic T-shirt is perfect for any occasion. Crafted from a
+            soft and breathable fabric, it offers superior comfort and style.
+          </p>
+
+          {/* Select Colors */}
+          <div>
+            <h3 className="text-lg font-medium text-gray-800">
+              Select Colors:
+            </h3>
+            <div className="flex items-center gap-4 mt-2">
+              <Button className="w-8 h-8 rounded-full bg-[#4F4631] border border-gray-300">
+                <TiTick size={20} />
+              </Button>
+              <Button className="w-8 h-8 rounded-full bg-[#314F4A] border border-gray-300"></Button>
+              <Button className="w-8 h-8 rounded-full bg-[#31344F] border border-gray-300"></Button>
+            </div>
+            <h3 className="text-lg font-medium text-gray-600 mt-6">
+              Choose Size:
+            </h3>
+            <div className="flex flex-row justify-center items-center px-6 py-3 gap-3 w-[86px] h-[46px] bg-[#F0F0F0] rounded-[62px] flex-none order-0 flex-grow-0 flex-row">
+              <span className="w-[38px] h-[22px] font-satoshi font-normal text-[16px] leading-[22px] text-[#00000099] flex-none order-0 flex-grow-0">
+                Small
+              </span>
+            </div>
+            <div className="flex flex-row justify-center items-center p-[12px_24px] gap-[12px] w-[105px] h-[46px] bg-[#F0F0F0] rounded-[62px] flex-none order-1 flex-grow-0">
+              <div className="w-[57px] h-[22px] text-[rgba(0,0,0,0.6)] font-satoshi text-[16px] leading-[22px] flex-none order-0 flex-grow-0">
+                Medium
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Reviews and Product Suggestions */}
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 py-10">
+        <Review />
+        <Product />
       </div>
     </main>
   );
