@@ -60,7 +60,7 @@ export default function Shop() {
             alt="Main Product"
             width={444}
             height={530}
-            className="w-[444px] h-[530px] border border-gray-300 rounded-[20px] object-cover"
+            className="w-[444px] h-[530px] border border-gray-300 hover:border-black rounded-[20px] object-cover"
           />
         </div>
 
@@ -110,14 +110,34 @@ export default function Shop() {
             <h3 className="text-lg font-medium text-gray-600 mt-6">
               Choose Size:
             </h3>
-            <div className="flex flex-row justify-center items-center px-6 py-3 gap-3 w-[86px] h-[46px] bg-[#F0F0F0] rounded-[62px] flex-none order-0 flex-grow-0 flex-row">
-              <span className="w-[38px] h-[22px] font-satoshi font-normal text-[16px] leading-[22px] text-[#00000099] flex-none order-0 flex-grow-0">
-                Small
-              </span>
-            </div>
-            <div className="flex flex-row justify-center items-center p-[12px_24px] gap-[12px] w-[105px] h-[46px] bg-[#F0F0F0] rounded-[62px] flex-none order-1 flex-grow-0">
-              <div className="w-[57px] h-[22px] text-[rgba(0,0,0,0.6)] font-satoshi text-[16px] leading-[22px] flex-none order-0 flex-grow-0">
-                Medium
+
+            <div className="absolute flex flex-row items-start p-0 gap-3 w-[420px] h-[46px] left-[750px] top[600px]">
+              <div className="flex flex-row justify-center items-center mt-5 px-6 py-3 gap-3 w-[86px] h-[46px] bg-[#F0F0F0] rounded-full">
+                <span className="w-[38px] h-[22px] text-[16px] leading-[22px] font-normal text-black/60">
+                  Small
+                </span>
+              </div>
+              <div className="flex flex-row justify-center items-center mt-5 px-6 py-3 gap-3 w-[105px] h-[46px] bg-[#F0F0F0] rounded-full">
+                <span className="w-[57px] h-[22px] text-[16px] leading-[22px] font-normal text-black/60">
+                  Medium
+                </span>
+              </div>
+              <div className="flex flex-row justify-center items-center mt-5 px-6 py-3 gap-3 w-[89px] h-[46px] bg-black rounded-full order-2">
+                <span className="w-[41px] h-[22px] text-[16px] leading-[22px] font-medium text-white">
+                  Large
+                </span>
+              </div>
+              <div className="flex flex-row justify-center items-center mt-5 px-6 py-3 gap-3 w-[104px] h-[46px] bg-[#F0F0F0] rounded-full order-3">
+                <span className="w-[56px] h-[22px] flex justify-center items-center font-satoshi font-normal text-[12px] leading-[22px] text-black/60">
+                  X-Large
+                </span>
+              </div>
+              <div className="flex flex-row justify-between items-center p-[16px_20px] gap-[12px] absolute w-[170px] h-[52px] left-[750px] top-[694px] bg-[#F0F0F0] rounded-[62px]">
+                <div className="m-auto w-[24px] h-[24px] flex-none order-0 flex-grow-0">
+                  <div className="absolute left-[10.94%] right-[10.94%] top-[45.31%] bottom-[45.31%] bg-black">
+                    -
+                  </div>
+                </div>
               </div>
             </div>
           </div>
