@@ -132,12 +132,23 @@ export default function Shop() {
                   X-Large
                 </span>
               </div>
-              <div className="flex flex-row justify-between items-center p-[16px_20px] gap-[12px] absolute w-[170px] h-[52px] left-[750px] top-[694px] bg-[#F0F0F0] rounded-[62px]">
-                <div className="m-auto w-[24px] h-[24px] flex-none order-0 flex-grow-0">
-                  <div className="absolute left-[10.94%] right-[10.94%] top-[45.31%] bottom-[45.31%] bg-black">
-                    -
-                  </div>
+            </div>
+            <div className="flex flex-row justify-between items-center p-[16px_20px] gap-[12px] absolute w-[170px] h-[52px] left-[750px] top-[694px] bg-[#F0F0F0] rounded-[62px]">
+              <div className="m-auto w-[24px] h-[24px] flex-none order-0 flex-grow-0">
+                <div className="absolute left-[10.94%] right-[10.94%] top-[45.31%] bottom-[45.31%]">
+                  -
                 </div>
+                <div className="mx-auto w-[6px] h-[22px] font-satoshi font-medium text-[16px] leading-[22px] text-black flex-none order-1 grow-0">
+                  1
+                </div>
+                <div className="absolute left-[10.94%] right-[10.94%] top-[10.94%] bottom-[10.94%]">
+                  +
+                </div>
+              </div>
+            </div>
+            <div className="absolute flex flex-row justify-center items-center p-[16px_54px] gap-3 w-[400px] h-[52px] left-[940px] top-[694px] bg-black rounded-[62px]">
+              <div className="w-[85px] h-[22px] text-white font-satoshi font-medium text-[16px] leading-[22px] flex-none order-0 flex-grow-0">
+                Add to Cart
               </div>
             </div>
           </div>
