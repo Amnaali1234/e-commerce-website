@@ -1,20 +1,42 @@
+import Image from "next/image";
 export default function Review() {
   return (
-    <main className="flex flex-row justify-center items-center">
-      <div className="absolute w-[133px] h-[14px] left-[240px] top-[826px] font-satoshi font-normal text-[20px] leading-[22px] text-[rgba(0,0,0,0.6)]">
+    <main className="flex justify-between items-center w-full max-w-screen px-8 top-[826px] left-0">
+      {/* Product Details */}
+      <div className="font-satoshi font-normal text-[20px] leading-[22px] text-black/60">
         Product Details
       </div>
 
-      <div className="absolute w-[154px] h-[14px] left-[calc(50%-154px/2-1px)] top-[826px] font-satoshi font-medium text-[20px] leading-[22px] text-[#000000] text-center">
+      {/* Rating & Reviews */}
+      <div className="font-satoshi font-medium text-[20px] leading-[22px] text-center text-black">
         Rating & Reviews
       </div>
 
-      <div className="absolute w-[47px] h-[14px] left-[calc(50%-47px/2+413.5px)] top-[826px] font-satoshi font-normal text-[20px] leading-[22px] text-[rgba(0,0,0,0.6)] text-right">
+      {/* FAQs */}
+      <div className="font-satoshi font-normal text-[20px] leading-[22px] text-black/60 text-right">
         FAQs
+      </div>
+      <div className="absolute w-[1240px] h-0 left-[100px] top-[864px] border border-[rgba(0,0,0,0.1)]"></div>
+      <div className="absolute w-[414px] h-0 left-[513px] top-[864px] border-2 border-black"></div>
+      <div className="flex flex-row justify-between ">
+        <div className="absolute w-[125px] h-[32px] left-[100px] top-[896px] font-satoshi font-bold text-[24px] leading-[32px] flex items-center text-black">
+          All Reviews
+        </div>
+        <div className="absolute w-[33px] h-[11px] left-[233px] top-[910px] font-satoshi font-normal text-[16px] leading-[22px] text-black/60">
+          (451)
+        </div>
+      </div>
+      <div className="flex flex-row items-start p-0 gap-[10px] absolute w-[354px] h-[48px] left-[986px] top-[888px]">
+        <div className="flex flex-row justify-between items-center p-[16px_20px] gap-[12px] w-[48px] h-[48px] bg-[#F0F0F0] rounded-[62px] flex-none order-0 flex-grow-0">
+          <div className="m-auto w-[24px] h-[24px] flex-none order-0 flex-grow-0">
+            <div className="absolute left-[7.81%] right-[7.81%] top-[10.94%] bottom-[10.94%]"></div>
+          </div>
+        </div>
       </div>
     </main>
   );
 }
+
 // import { IoIosStar } from "react-icons/io";
 
 // export default function Reviewr() {

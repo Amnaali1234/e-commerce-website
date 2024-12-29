@@ -27,33 +27,33 @@ export default function Hero() {
         {/* Image Positioned Below Content on Mobile */}
         <div className="w-full md:w-1/2 relative h-[400px] md:h-[500px] lg:h-[600px] mt-8 md:mt-0">
           <Image
-            src="/images/Rectangle 2.png"
+            src="/images/Hero.jpeg"
             alt="Fashionable Couple"
-            layout="fill"
             objectFit="cover"
-            objectPosition="bottom"
-            priority
+            width={700}
+            height={700}
           />
         </div>
       </div>
 
       {/* Star Icons */}
-      <div className="absolute top-[18%] right-[10%] w-[24px] h-[24px] md:top-[22%] md:right-[12%] md:w-[32px] md:h-[32px]">
+      <div className="absolute left-[87.15%] right-[5.62%] top-[5.03%] bottom-[92.59%]">
         <Image
           src="/images/starhero.png"
           alt="Star Icon"
-          width={32}
-          height={32}
+          width={104}
+          height={104}
         />
       </div>
 
-      <div className="absolute bottom-[25%] right-[30%] w-[24px] h-[24px] md:bottom-[35%] md:right-[25%] md:w-[32px] md:h-[32px]">
+      <div className="absolute left-[52.08%] right-[44.03%] mt-64 top-[9.86%] bottom-[88.86%]">
         <Image
           src="/images/starhero.png"
           alt="Star Icon"
-          width={32}
-          height={32}
+          width={56}
+          height={56}
         />
+              
       </div>
     </section>
   );

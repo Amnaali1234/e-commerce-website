@@ -9,8 +9,6 @@ import { TiTick } from "react-icons/ti";
 export default function Shop() {
   return (
     <main className="min-h-screen bg-white overflow-x-hidden">
-      {" "}
-      {/* Prevent horizontal scroll */}
       {/* Breadcrumb Navigation */}
       <div className="flex items-center gap-2 py-6 px-10 text-sm text-gray-600">
         <Link href="/" className="hover:text-gray-900">
@@ -65,8 +63,8 @@ export default function Shop() {
         </div>
 
         {/* Right Column - Product Details */}
-        <div className="lg:col-span-5 space-y-6">
-          <h1 className="text-[40px] font-bold leading-[48px] text-black">
+        <div className="lg:col-span-5 space-y-2">
+          <h1 className="text-[40px] font-extrabold leading-[48px] text-black w-[600px] h-[48px]">
             One Life Graphic T-shirt
           </h1>
 
@@ -111,45 +109,42 @@ export default function Shop() {
               Choose Size:
             </h3>
 
-            <div className="absolute flex flex-row items-start p-0 gap-3 w-[420px] h-[46px] left-[750px] top[600px]">
-              <div className="flex flex-row justify-center items-center mt-5 px-6 py-3 gap-3 w-[86px] h-[46px] bg-[#F0F0F0] rounded-full">
-                <span className="w-[38px] h-[22px] text-[16px] leading-[22px] font-normal text-black/60">
-                  Small
-                </span>
+            {/* Sizes */}
+            <div className="flex items-center gap-3 mt-4">
+              <div className="px-6 py-3 bg-[#F0F0F0] rounded-full">
+                <span className="text-black/60 text-[16px]">Small</span>
               </div>
-              <div className="flex flex-row justify-center items-center mt-5 px-6 py-3 gap-3 w-[105px] h-[46px] bg-[#F0F0F0] rounded-full">
-                <span className="w-[57px] h-[22px] text-[16px] leading-[22px] font-normal text-black/60">
-                  Medium
-                </span>
+              <div className="px-6 py-3 bg-[#F0F0F0] rounded-full">
+                <span className="text-black/60 text-[16px]">Medium</span>
               </div>
-              <div className="flex flex-row justify-center items-center mt-5 px-6 py-3 gap-3 w-[89px] h-[46px] bg-black rounded-full order-2">
-                <span className="w-[41px] h-[22px] text-[16px] leading-[22px] font-medium text-white">
-                  Large
-                </span>
+              <div className="px-6 py-3 bg-black rounded-full">
+                <span className="text-white text-[16px]">Large</span>
               </div>
-              <div className="flex flex-row justify-center items-center mt-5 px-6 py-3 gap-3 w-[104px] h-[46px] bg-[#F0F0F0] rounded-full order-3">
-                <span className="w-[56px] h-[22px] flex justify-center items-center font-satoshi font-normal text-[12px] leading-[22px] text-black/60">
-                  X-Large
-                </span>
+              <div className="px-6 py-3 bg-[#F0F0F0] rounded-full">
+                <span className="text-black/60 text-[16px]">X-Large</span>
               </div>
             </div>
-            <div className="flex flex-row justify-between items-center p-[16px_20px] gap-[12px] absolute w-[170px] h-[52px] left-[750px] top-[694px] bg-[#F0F0F0] rounded-[62px]">
-              <div className="m-auto w-[24px] h-[24px] flex-none order-0 flex-grow-0">
-                <div className="absolute left-[10.94%] right-[10.94%] top-[45.31%] bottom-[45.31%]">
-                  -
-                </div>
-                <div className="mx-auto w-[6px] h-[22px] font-satoshi font-medium text-[16px] leading-[22px] text-black flex-none order-1 grow-0">
-                  1
-                </div>
-                <div className="absolute left-[10.94%] right-[10.94%] top-[10.94%] bottom-[10.94%]">
-                  +
-                </div>
+
+            {/* Quantity Selector */}
+            <div className="flex items-center gap-3 mt-6">
+              <div className="flex items-center justify-between w-[170px] h-[52px] bg-[#F0F0F0] rounded-[62px] px-6">
+                <Image
+                  src="/images/sub.png"
+                  alt="Minus Icon"
+                  width={24}
+                  height={24}
+                />
+                <span>1</span>
+                <Image
+                  src="/images/add.png"
+                  alt="Plus Icon"
+                  width={18}
+                  height={18}
+                />
               </div>
-            </div>
-            <div className="absolute flex flex-row justify-center items-center p-[16px_54px] gap-3 w-[400px] h-[52px] left-[940px] top-[694px] bg-black rounded-[62px]">
-              <div className="w-[85px] h-[22px] text-white font-satoshi font-medium text-[16px] leading-[22px] flex-none order-0 flex-grow-0">
+              <Button className="bg-black text-white rounded-[62px] px-8 py-3 w-[400px] h-[42px]">
                 Add to Cart
-              </div>
+              </Button>
             </div>
           </div>
         </div>
