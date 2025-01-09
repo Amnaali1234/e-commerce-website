@@ -9,7 +9,6 @@ import { TiTick } from "react-icons/ti";
 export default function Shop() {
   return (
     <main className="min-h-screen bg-white overflow-x-hidden">
-      {/* Breadcrumb Navigation */}
       <div className="flex items-center gap-2 py-6 px-10 text-sm text-gray-600">
         <Link href="/" className="hover:text-gray-900">
           Home
@@ -26,7 +25,6 @@ export default function Shop() {
         <span className="text-black">T-shirts</span>
       </div>
       <div className="max-w-7xl mx-auto px-4 lg:px-8 py-10 grid grid-cols-1 lg:grid-cols-12 gap-6">
-        {/* Left Column - Image Thumbnails */}
         <div className="lg:col-span-2 flex flex-col items-start space-y-4">
           <Image
             src="/images/shop-img-2.png"
@@ -51,7 +49,6 @@ export default function Shop() {
           />
         </div>
 
-        {/* Center Column - Main Image */}
         <div className="lg:col-span-5 flex justify-center">
           <Image
             src="/images/shop-img-2.png"
@@ -62,13 +59,11 @@ export default function Shop() {
           />
         </div>
 
-        {/* Right Column - Product Details */}
         <div className="lg:col-span-5 space-y-2">
           <h1 className="text-[40px] font-extrabold leading-[48px] text-black w-[600px] h-[48px]">
             One Life Graphic T-shirt
           </h1>
 
-          {/* Product Rating */}
           <div className="flex items-center gap-2 text-yellow-500">
             {[...Array(5)].map((_, index) => (
               <IoIosStar key={index} size={24} />
@@ -76,7 +71,6 @@ export default function Shop() {
             <span className="text-black text-[16px]">4.5/5</span>
           </div>
 
-          {/* Pricing */}
           <div className="flex items-center gap-4">
             <p className="text-[32px] font-bold text-black">$260</p>
             <p className="text-[32px] font-bold text-black/30 line-through">
@@ -87,13 +81,11 @@ export default function Shop() {
             </p>
           </div>
 
-          {/* Product Description */}
           <p className="text-gray-600 border-b-2 border-gray-100 mt-6">
             This graphic T-shirt is perfect for any occasion. Crafted from a
             soft and breathable fabric, it offers superior comfort and style.
           </p>
 
-          {/* Select Colors */}
           <div>
             <h3 className="text-lg font-medium text-gray-800">
               Select Colors:
@@ -109,7 +101,6 @@ export default function Shop() {
               Choose Size:
             </h3>
 
-            {/* Sizes */}
             <div className="flex items-center gap-3 mt-4">
               <div className="px-6 py-3 bg-[#F0F0F0] rounded-full">
                 <span className="text-black/60 text-[16px]">Small</span>
@@ -125,7 +116,6 @@ export default function Shop() {
               </div>
             </div>
 
-            {/* Quantity Selector */}
             <div className="flex items-center gap-3 mt-6">
               <div className="flex items-center justify-between w-[170px] h-[52px] bg-[#F0F0F0] rounded-[62px] px-6">
                 <Image
@@ -149,7 +139,7 @@ export default function Shop() {
           </div>
         </div>
       </div>
-      {/* Reviews and Product Suggestions */}
+
       <div className="max-w-7xl mx-auto px-4 lg:px-8 py-10">
         <Review />
         <Product />
