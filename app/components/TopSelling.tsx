@@ -12,7 +12,7 @@ export default function TopSelling() {
       {/* Product Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {/* Product 1 */}
-        <div className="border border-gray-300 rounded-lg overflow-hidden shadow-lg">
+        <div className="border border-gray-300 rounded-lg transition-transform hover:scale-105 hover:shadow-xl overflow-hidden shadow-lg">
           <Image
             src="/images/sale1.png"
             alt="T-shirt with Tape Details"
@@ -39,7 +39,7 @@ export default function TopSelling() {
         </div>
 
         {/* Product 2 */}
-        <div className="border border-gray-300 rounded-lg overflow-hidden shadow-lg">
+        <div className="border border-gray-300 rounded-lg transition-transform hover:scale-105 hover:shadow-xl overflow-hidden shadow-lg">
           <Image
             src="/images/sale2.png"
             alt="Skinny Fit Jeans"
@@ -67,7 +67,7 @@ export default function TopSelling() {
         </div>
 
         {/* Product 3 */}
-        <div className="border border-gray-300 rounded-lg overflow-hidden shadow-lg">
+        <div className="border border-gray-300 rounded-lg transition-transform hover:scale-105 hover:shadow-xl overflow-hidden shadow-lg">
           <Image
             src="/images/sale3.png"
             alt="Checkered Shirt"
@@ -92,7 +92,7 @@ export default function TopSelling() {
         </div>
 
         {/* Product 4 */}
-        <div className="border border-gray-300 rounded-lg overflow-hidden shadow-lg">
+        <div className="border border-gray-300 rounded-lg transition-transform hover:scale-105 hover:shadow-xl overflow-hidden shadow-lg">
           <Image
             src="/images/sale4.png"
             alt="Sleeve Striped T-shirt"

@@ -15,7 +15,7 @@ const DressStyle = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* Casual Image (Card 1) */}
         <div className="bg-white rounded-[20px] overflow-hidden h-[250px] col-span-1">
-          <div className="relative w-full h-full">
+          <div className="relative w-full h-full transition-transform hover:scale-105 hover:shadow-xl">
             <Image
               src="/images/dress-1.png"
               alt="Casual Style"
@@ -30,7 +30,7 @@ const DressStyle = () => {
 
         {/* Formal Image (Card 2) */}
         <div className="bg-white rounded-[20px] overflow-hidden h-[289px] col-span-2 sm:col-span-1 lg:col-span-2">
-          <div className="relative w-full h-full">
+          <div className="relative w-full h-full transition-transform hover:scale-105 hover:shadow-xl">
             <Image
               src="/images/dress-2.png"
               alt="Formal Style"
@@ -45,7 +45,7 @@ const DressStyle = () => {
 
         {/* Party Image (Card 3) */}
         <div className="bg-white rounded-[20px] overflow-hidden h-[289px] col-span-2 sm:col-span-1 lg:col-span-2">
-          <div className="relative w-full h-full">
+          <div className="relative w-full h-full transition-transform hover:scale-105 hover:shadow-xl">
             <Image
               src="/images/dress-3.png"
               alt="Party Style"
@@ -60,7 +60,7 @@ const DressStyle = () => {
 
         {/* Gym Image (Card 4) */}
         <div className="bg-white rounded-[20px] overflow-hidden h-[250px] col-span-1">
-          <div className="relative w-full h-full">
+          <div className="relative w-full h-full transition-transform hover:scale-105 hover:shadow-xl">
             <Image
               src="/images/dress-4.png"
               alt="Gym Style"
