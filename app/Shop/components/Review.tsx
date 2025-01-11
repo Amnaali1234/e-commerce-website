@@ -1,4 +1,6 @@
+import Image from "next/image";
 import React from "react";
+import { IoIosArrowDown } from "react-icons/io";
 
 const ProductPage = () => {
   const reviews = [
@@ -70,12 +72,41 @@ const ProductPage = () => {
       {/* Review Section */}
       <div>
         <h2 className="text-2xl font-bold mb-6">All Reviews (45)</h2>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {reviews.map((review) => (
             <div
               key={review.id}
               className="bg-white border border-gray-200 rounded-lg p-6 shadow-md"
             >
+              <div className="absolute flex flex-row items-start p-0 gap-2.5 w-[354px] h-[48px] left-[986px] top-[888px]">
+                <div className="flex flex-row justify-between items-center p-[16px_20px] gap-3 w-[48px] h-[48px] bg-[#F0F0F0] rounded-[62px] flex-none order-0 flex-grow-0">
+                  <div className="m-auto w-[24px] h-[24px] flex-none order-0 flex-grow-0">
+                    <div className="m-auto w-[24px] h-[24px] flex-none order-0 flex-grow-0">
+                      <Image
+                        src="/images/vector.png"
+                        alt="vector-image"
+                        width={50}
+                        height={50}
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-row justify-between items-center p-[16px_20px] gap-3 w-[120px] h-[48px] bg-[#F0F0F0] rounded-[62px] flex-none order-1 flex-grow-0">
+                  <div className="m-auto w-[43px] h-[22px] text-[16px] leading-[22px] font-satoshi font-medium text-black flex-none order-0 flex-grow-0">
+                    Latest
+                  </div>
+                  <div className="m-auto w-[16px] h-[16px] flex-none order-1 flex-grow-0">
+                    <IoIosArrowDown />
+                  </div>
+                </div>
+                <div className="flex flex-row justify-between items-center p-[16px_20px] gap-3 w-[166px] h-[48px] bg-black rounded-[62px] flex-none order-2 flex-grow-0">
+                  <div className="m-auto w-[107px] h-[22px] text-[16px] leading-[22px] font-satoshi font-medium text-white flex-none order-0 flex-grow-0">
+                    Write a Review
+                  </div>
+                </div>
+              </div>
+
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center font-bold text-gray-600">
@@ -101,7 +132,7 @@ const ProductPage = () => {
         {/* Load More Button */}
         <div className="text-center mt-8">
           <button className="mt-8 px-10 py-3 bg-white text-black rounded-3xl border border-black hover:bg-gray-200">
-            load more reviews
+            Load More Reviews
           </button>
         </div>
       </div>
@@ -110,81 +141,3 @@ const ProductPage = () => {
 };
 
 export default ProductPage;
-
-// import { IoIosStar } from "react-icons/io";
-
-// export default function Reviewr() {
-//   return (
-//     <section
-//       id="customer-testimonial"
-//       className="bg-[#fff] py-[112px] flex flex-col gap-[64px] items-center"
-//     >
-//       {/* Heading */}
-//       <div className="w-full text-start mx-4 sm:ml-16 lg:ml-60">
-//         <h2 className="text-4xl font-extrabold leading-[57.6px]">
-//           OUR HAPPY CUSTOMERS
-//         </h2>
-//       </div>
-
-//       {/* Testimonials Container */}
-//       <div className="w-full max-w-[1152px] flex flex-col sm:flex-row sm:justify-between gap-[32px] px-4">
-//         {/* Card 1 */}
-//         <div className="w-full sm:w-[400px] h-[240px] p-8 flex flex-col gap-6 border border-black rounded-lg shadow-lg bg-white">
-//           {/* Stars */}
-//           <div className="flex gap-1 text-yellow-500">
-//             <IoIosStar size={24} />
-//             <IoIosStar size={24} />
-//             <IoIosStar size={24} />
-//             <IoIosStar size={24} />
-//             <IoIosStar size={24} />
-//           </div>
-//           {/* Customer Name */}
-//           <h3 className="text-xl font-semibold">Sarah M.</h3>
-//           {/* Testimonial Text */}
-//           <p className="text-[18px] leading-[27px] text-gray-700">
-//             &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-//             Suspendisse tristique.&quot;
-//           </p>
-//         </div>
-
-//         {/* Card 2 */}
-//         <div className="w-full sm:w-[400px] h-[240px] p-8 flex flex-col gap-6 border border-black rounded-lg shadow-lg bg-white">
-//           {/* Stars */}
-//           <div className="flex gap-1 text-yellow-500">
-//             <IoIosStar size={24} />
-//             <IoIosStar size={24} />
-//             <IoIosStar size={24} />
-//             <IoIosStar size={24} />
-//             <IoIosStar size={24} />
-//           </div>
-//           {/* Customer Name */}
-//           <h3 className="text-xl font-semibold">Alex K.</h3>
-//           {/* Testimonial Text */}
-//           <p className="text-[18px] leading-[27px] text-gray-700">
-//             &quot;Excellent service and great quality products. Highly
-//             recommended!&quot;
-//           </p>
-//         </div>
-
-//         {/* Card 3 */}
-//         <div className="w-full sm:w-[400px] h-[240px] p-8 flex flex-col gap-6 border border-black rounded-lg shadow-lg bg-white">
-//           {/* Stars */}
-//           <div className="flex gap-1 text-yellow-500">
-//             <IoIosStar size={24} />
-//             <IoIosStar size={24} />
-//             <IoIosStar size={24} />
-//             <IoIosStar size={24} />
-//             <IoIosStar size={24} />
-//           </div>
-//           {/* Customer Name */}
-//           <h3 className="text-xl font-semibold">James L.</h3>
-//           {/* Testimonial Text */}
-//           <p className="text-[18px] leading-[27px] text-gray-700">
-//             &quot;Great experience! The team was very professional and
-//             attentive.&quot;
-//           </p>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }

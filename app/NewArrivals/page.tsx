@@ -1,4 +1,5 @@
 // File: src/app/components/HeroSection.js
+import Image from "next/image";
 export default function HeroSection() {
   const products = [
     {
@@ -6,35 +7,35 @@ export default function HeroSection() {
       price: "$145",
       rating: "4.5",
       discount: "20%",
-      image: "https://via.placeholder.com/150",
+      image: "/images/product-2.png",
     },
     {
       name: "Polo with Tipping Details",
       price: "$180",
       rating: "4.5",
       discount: "30%",
-      image: "https://via.placeholder.com/150",
+      image: "/images/product-3.png",
     },
     {
       name: "Black Striped T-shirt",
       price: "$120",
       rating: "4.5",
       discount: "50%",
-      image: "https://via.placeholder.com/150",
+      image: "/images/product-4.png",
     },
     {
       name: "Skinny Fit Jeans",
       price: "$240",
       rating: "4.5",
       discount: "20%",
-      image: "https://via.placeholder.com/150",
+      image: "/images/product-2.png",
     },
     {
       name: "Checkered Shirt",
       price: "$180",
       rating: "4.5",
       discount: "10%",
-      image: "https://via.placeholder.com/150",
+      image: "/images/shop2.png",
     },
     {
       name: "Sleeve Striped T-shirt",
