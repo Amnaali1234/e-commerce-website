@@ -1,7 +1,24 @@
+import Link from "next/link";
+import { IoIosArrowForward } from "react-icons/io";
+
 // File: src/app/components/HeroSection.js
 export default function HeroSection() {
   return (
     <div className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="flex items-center gap-2 py-6 px-10 text-sm text-gray-600">
+        <Link href="/" className="hover:text-gray-900">
+          Home
+        </Link>
+        <IoIosArrowForward />
+        <Link href="/shop" className="hover:text-gray-900">
+          Shop
+        </Link>
+        <IoIosArrowForward />
+        <Link href="/shop/men" className="hover:text-gray-900">
+          Men
+        </Link>
+        <IoIosArrowForward />
+      </div>
       <div className="max-w-7xl mx-auto">
         {/* Filters Section */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
