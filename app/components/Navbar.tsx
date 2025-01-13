@@ -14,12 +14,16 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full px-4 py-3 border-b border-gray-100 top-0 left-0 bg-white">
+    <header className="w-full px-4 py-3 border-b border-gray-100 top-0 left-0 bg-white z-50">
       <div className="flex items-center justify-between max-w-screen-xl mx-auto">
         {/* Left Section: Hamburger Icon and Logo */}
         <div className="flex items-center gap-4">
           {/* Hamburger Menu Button for Mobile */}
-          <button className="md:hidden" onClick={toggleMenu}>
+          <button
+            className="md:hidden focus:outline-none"
+            onClick={toggleMenu}
+            aria-label="Toggle Navigation"
+          >
             {isMenuOpen ? <AiOutlineClose size={26} /> : <FiMenu size={26} />}
           </button>
 
@@ -87,24 +91,28 @@ export default function Header() {
           <Link
             className="block text-lg font-medium text-gray-800 hover:text-black transition-all"
             href="/Shop"
+            onClick={() => setIsMenuOpen(false)}
           >
             Shop
           </Link>
           <Link
             className="block text-lg font-medium text-gray-800 hover:text-black transition-all"
             href="/OnSale"
+            onClick={() => setIsMenuOpen(false)}
           >
             OnSale
           </Link>
           <Link
             className="block text-lg font-medium text-gray-800 hover:text-black transition-all"
             href="/NewArrivals"
+            onClick={() => setIsMenuOpen(false)}
           >
             NewArrivals
           </Link>
           <Link
             className="block text-lg font-medium text-gray-800 hover:text-black transition-all"
             href="/Brands"
+            onClick={() => setIsMenuOpen(false)}
           >
             Brands
           </Link>
