@@ -105,12 +105,26 @@ export default function HeroSection() {
           {/* Colors */}
           <div className="mb-6">
             <h3 className="text-sm font-semibold mb-2">Colors</h3>
-            <div className="flex space-x-2">
+            <div className="flex space-x-5 mt-8">
               <span className="w-6 h-6 rounded-full bg-green-500"></span>
               <span className="w-6 h-6 rounded-full bg-red-500"></span>
               <span className="w-6 h-6 rounded-full bg-yellow-500"></span>
-              <span className="w-6 h-6 rounded-full bg-blue-500"></span>
-              <span className="w-6 h-6 rounded-full bg-gray-500"></span>
+              <span className="w-6 h-6 rounded-full bg-orange-500"></span>
+              <span className="w-6 h-6 rounded-full bg-sky-500"></span>
+            </div>
+          </div>
+          <div className="flex space-x-5 mt-8">
+            <span className="w-6 h-6 rounded-full bg-blue-700"></span>
+            <span className="w-6 h-6 rounded-full bg-purple-700"></span>
+            <span className="w-6 h-6 rounded-full bg-pink-500"></span>
+            <span className="w-6 h-6 rounded-full bg-gray-400"></span>
+            <span className="w-6 h-6 rounded-full bg-black"></span>
+          </div>
+          <div className="flex flex-col items-start p-0 gap-5 w-[247px] h-[274px] flex-none order-8 self-stretch flex-grow-0">
+            <div className="flex flex-row justify-between items-center p-0 gap-5 w-[247px] h-[27px] flex-none order-0 self-stretch flex-grow-0">
+              <div className="m-auto w-[38px] h-[27px] font-satoshi font-bold text-[20px] leading-[27px] flex items-center text-black flex-none order-0 flex-grow-0">
+                size
+              </div>
             </div>
           </div>
         </div>
