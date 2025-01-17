@@ -89,30 +89,37 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <nav className="md:hidden mt-4 space-y-4 bg-white p-4 shadow-md rounded-lg absolute top-16 left-0 w-full">
+        <nav className="md:hidden mt-4 bg-white shadow-md p-4 absolute top-16 left-0 w-full rounded-lg z-40">
           <Link
-            className="block text-lg font-medium text-gray-800 hover:text-black transition-all"
+            className="block text-lg font-medium text-gray-800 hover:text-black transition-all py-2"
+            href="/"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Home
+          </Link>
+          <Link
+            className="block text-lg font-medium text-gray-800 hover:text-black transition-all py-2"
             href="/Shop"
             onClick={() => setIsMenuOpen(false)}
           >
             Shop
           </Link>
           <Link
-            className="block text-lg font-medium text-gray-800 hover:text-black transition-all"
+            className="block text-lg font-medium text-gray-800 hover:text-black transition-all py-2"
             href="/OnSale"
             onClick={() => setIsMenuOpen(false)}
           >
             OnSale
           </Link>
           <Link
-            className="block text-lg font-medium text-gray-800 hover:text-black transition-all"
+            className="block text-lg font-medium text-gray-800 hover:text-black transition-all py-2"
             href="/NewArrivals"
             onClick={() => setIsMenuOpen(false)}
           >
-            NewArrivals
+            New Arrivals
           </Link>
           <Link
-            className="block text-lg font-medium text-gray-800 hover:text-black transition-all"
+            className="block text-lg font-medium text-gray-800 hover:text-black transition-all py-2"
             href="/Brands"
             onClick={() => setIsMenuOpen(false)}
           >
