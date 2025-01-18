@@ -80,10 +80,12 @@ export default function Header() {
               className="cursor-pointer text-gray-800 hover:text-black transition-all"
             />
           </Link>
-          <IoMdContact
-            size={26}
-            className="cursor-pointer text-gray-800 hover:text-black transition-all"
-          />
+          <Link href="/contact">
+            <IoMdContact
+              size={26}
+              className="cursor-pointer text-gray-800 hover:text-black transition-all"
+            />
+          </Link>
         </div>
       </div>
 
