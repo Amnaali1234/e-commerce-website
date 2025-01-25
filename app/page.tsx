@@ -29,6 +29,7 @@ export default function Home() {
 // import { Product } from "@/types/product";
 // import Image from "next/image";
 // import React, { useEffect, useState } from "react";
+// import Link from "next/link";
 
 // const Home = () => {
 //   const [Products, setProducts] = useState<Product[]>([]);
@@ -37,7 +38,17 @@ export default function Home() {
 //     const fetchProducts = async () => {
 //       try {
 //         const fetchedProducts: Product[] = await client.fetch(allproducts);
-//         setProducts(fetchedProducts);
+
+//         // Filter products to exclude those with missing required fields
+//         const validProducts = fetchedProducts.filter(
+//           (product) =>
+//             product.image && // Ensure the product has an image
+//             product.name && // Ensure the product has a name
+//             product.price && // Ensure the product has a price
+//             product.slug?.current // Ensure the product has a valid slug
+//         );
+
+//         setProducts(validProducts);
 //       } catch (error) {
 //         console.error("Error fetching products:", error);
 //       }
@@ -56,29 +67,35 @@ export default function Home() {
 //             key={product?._id}
 //             className="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
 //           >
-//             {product.image && (
-//               <Image
-//                 src={urlFor(product.image).url()}
-//                 alt={product.name || "Product Image"}
-//                 width={300}
-//                 height={300}
-//                 className="w-full h-64 object-cover"
-//               />
-//             )}
-//             <div className="p-4">
-//               <h2 className="text-lg font-semibold text-gray-900 mb-2">
-//                 {product.name}
-//               </h2>
-//               <p className="text-sm text-gray-600 mb-2">
-//                 {product.description}
-//               </p>
-//               <p className="text-xl font-bold text-gray-800 mb-4">
-//                 ${product.price.toFixed(2)}
-//               </p>
-//               <button className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition duration-300">
-//                 Add to Cart
-//               </button>
-//             </div>
+//             {product?.slug?.current ? (
+//               <Link href={`/product/${product.slug.current}`}>
+//                 <div>
+//                   {product.image && (
+//                     <Image
+//                       src={urlFor(product.image).url()}
+//                       alt={product.name || "Product Image"}
+//                       width={300}
+//                       height={300}
+//                       className="w-full h-64 object-cover"
+//                     />
+//                   )}
+//                   <div className="p-4">
+//                     <h2 className="text-lg font-semibold text-gray-900 mb-2">
+//                       {product.name}
+//                     </h2>
+//                     {/* <p className="text-sm text-gray-600 mb-2">
+//                       {product.description || "No description available"}
+//                     </p> */}
+//                     <p className="text-xl font-bold text-gray-800 mb-4">
+//                       ${product.price.toFixed(2)}
+//                     </p>
+//                     <button className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition duration-300">
+//                       Add to Cart
+//                     </button>
+//                   </div>
+//                 </div>
+//               </Link>
+//             ) : null}
 //           </div>
 //         ))}
 //       </div>
