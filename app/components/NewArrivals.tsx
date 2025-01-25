@@ -142,6 +142,8 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import product from "@/sanity/schemaTypes/product";
 import { Button } from "@/components/ui/button";
+import { addToCart } from "../actions/actions";
+import Swal from "sweetalert2";
 
 const Home = () => {
   const [Products, setProducts] = useState<Product[]>([]);
@@ -167,6 +169,18 @@ const Home = () => {
     };
     fetchProducts();
   }, []);
+
+  const handleAddToCart = (e: React.MouseEvent, Product: Product) => {
+    e.preventDefault();
+    Swal.fire({
+      position: "top-right",
+      icon: "success",
+      title: `${product.name} added to cart`,
+      showConfirmButton: false,
+      timer: 1000,
+    });
+    addToCart(Product);
+  };
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
@@ -199,7 +213,10 @@ const Home = () => {
                     <p className="text-xl font-bold text-gray-800 mb-4">
                       ${product.price.toFixed(2)}
                     </p>
-                    <Button className="w-full bg-black text-white py-2 rounded hover:bg-gray-700 transition duration-300">
+                    <Button
+                      className="bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:lg hover:scale-110 transition-transform duration-300 ease-in-out"
+                      onClick={(e) => handleAddToCart(e, product)}
+                    >
                       Add to Cart
                     </Button>
                   </div>
