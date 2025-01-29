@@ -10,6 +10,7 @@ import {
 import Swal from "sweetalert2";
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const Cartpage = () => {
   const [cartItems, setCartItems] = useState<Product[]>([]);
@@ -58,7 +59,7 @@ const Cartpage = () => {
       0
     );
   };
-
+  const router = useRouter();
   const handleProceed = () => {
     Swal.fire({
       title: "Proceed to Checkout?",
@@ -75,6 +76,7 @@ const Cartpage = () => {
           "Your order has been successfully processed.",
           "success"
         );
+        router.push("/checkout");
         setCartItems([]);
       }
     });
