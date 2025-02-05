@@ -152,13 +152,12 @@ const Home = () => {
       try {
         const fetchedProducts: Product[] = await client.fetch(five);
 
-        // Filter products to exclude those with missing required fields
         const validProducts = fetchedProducts.filter(
           (product) =>
-            product.image && // Ensure the product has an image
-            product.name && // Ensure the product has a name
-            product.price && // Ensure the product has a price
-            product.slug?.current // Ensure the product has a valid slug
+            product.image &&
+            product.name &&
+            product.price &&
+            product.slug?.current
         );
 
         setProducts(validProducts);
@@ -213,7 +212,7 @@ const Home = () => {
                       ${product.price.toFixed(2)}
                     </p>
                     <Button
-                      className="bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:lg hover:scale-110 transition-transform duration-300 ease-in-out"
+                      className="bg-gradient-to-r from-black to-gray-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:lg hover:scale-110 transition-transform duration-300 ease-in-out"
                       onClick={(e) => handleAddToCart(e, product)}
                     >
                       Add to Cart
