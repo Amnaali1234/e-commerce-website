@@ -130,6 +130,7 @@
 //     </section>
 //   );
 // }
+
 "use client";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";

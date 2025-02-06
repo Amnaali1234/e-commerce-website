@@ -1,4 +1,9 @@
 export interface Product {
+  title: string;
+  originalPrice: number;
+  colors: any;
+  rating: string;
+  oldPrice: any;
   category: string;
   inventory: number;
   _id: string;
