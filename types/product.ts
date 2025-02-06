@@ -1,4 +1,7 @@
 export interface Product {
+  imageUrl: string;
+  discountPercent: any;
+  sizes: any;
   title: string;
   originalPrice: number;
   colors: any;
