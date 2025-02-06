@@ -135,7 +135,7 @@
 
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
-import { allproducts, four } from "@/sanity/lib/queries";
+import { four } from "@/sanity/lib/queries";
 import { Product } from "@/types/product";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";

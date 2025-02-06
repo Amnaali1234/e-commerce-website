@@ -8,7 +8,7 @@ import {
   updateCartQuantity,
 } from "../actions/actions";
 import Swal from "sweetalert2";
-import { url } from "inspector";
+
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 
