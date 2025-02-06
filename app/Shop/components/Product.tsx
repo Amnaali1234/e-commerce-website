@@ -132,6 +132,7 @@
 // }
 
 "use client";
+
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import { six } from "@/sanity/lib/queries";
@@ -139,12 +140,12 @@ import { Product } from "@/types/product";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import product from "@/sanity/schemaTypes/product";
 import { Button } from "@/components/ui/button";
-//import { addToCart } from "../actions/actions";
 import Swal from "sweetalert2";
+import { addToCart } from "@/app/actions/actions";
+import product from "@/sanity/schemaTypes/product";
 
-const Products = () => {
+const Home = () => {
   const [Products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
@@ -152,13 +153,12 @@ const Products = () => {
       try {
         const fetchedProducts: Product[] = await client.fetch(six);
 
-        // Filter products to exclude those with missing required fields
         const validProducts = fetchedProducts.filter(
           (product) =>
-            product.image && // Ensure the product has an image
-            product.name && // Ensure the product has a name
-            product.price && // Ensure the product has a price
-            product.slug?.current // Ensure the product has a valid slug
+            product.image &&
+            product.name &&
+            product.price &&
+            product.slug?.current
         );
 
         setProducts(validProducts);
@@ -178,13 +178,13 @@ const Products = () => {
       showConfirmButton: false,
       timer: 1000,
     });
-    // addToCart(Product);
+    addToCart(Product);
   };
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       <h1 className="text-4xl font-extrabold mb-8 text-center text-black">
-        You Might also Like
+        You Might Also Like
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {Products.map((product) => (
@@ -229,4 +229,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Home;
