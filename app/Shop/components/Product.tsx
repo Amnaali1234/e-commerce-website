@@ -144,7 +144,7 @@ import { Button } from "@/components/ui/button";
 //import { addToCart } from "../actions/actions";
 import Swal from "sweetalert2";
 
-const shop = () => {
+const Products = () => {
   const [Products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
@@ -229,4 +229,4 @@ const shop = () => {
   );
 };
 
-export default shop;
+export default Products;
