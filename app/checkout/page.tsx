@@ -230,7 +230,7 @@ const CheckOut = () => {
 
             <div>
               <label className="block text-sm font-medium text-gray-600">
-                email
+                Email
               </label>
               <input
                 type="text"
@@ -324,7 +324,7 @@ const CheckOut = () => {
 
           <Button
             onClick={handlePlaceOrder}
-            className="w-full mt-6 bg-gradient-to-r from-pink-500 to-purple-500 hover:bg-indigo-700 text-white py-3 rounded-lg font-semibold text-lg shadow-md transition"
+            className="w-full mt-6 bg-gradient-to-r from-black to-gray-500 hover:bg-indigo-700 text-white py-3 rounded-lg font-semibold text-lg shadow-md transition"
           >
             Place Order
           </Button>
